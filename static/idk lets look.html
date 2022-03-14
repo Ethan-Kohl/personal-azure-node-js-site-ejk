@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<!--
+    Author: Ethan Kohl
+    Class: Software Engineer
+    Description: Site where person writes two words and sees if it contains, and does other things too. Lab 2.
+-->
+<head>
+    <meta charset="UTF-8">
+	<title>Hello World</title>
+    <style> *{
+        box-sizing: border-box;
+    }
+    header{
+        background-color: rgb(2, 102, 19);
+        padding: 20px;
+        text-align: center;
+        font-size: 24px;
+        color: white;
+        }
+        nav{
+        float: left;
+        width: 23.58%;
+        background: rgb(14, 1, 1);
+        padding:20px;
+        text-align: center;
+        Height: 250px;
+        }
+        article{
+        float: left;
+        width: 52.55%;
+        background: rgb(159, 159, 160);
+        padding:20px;
+        text-align: center;
+        Height: 250px;
+        }
+        footer {
+        background-color: #777;
+        padding: 10px;
+        text-align: center;
+        color: white;
+        height: 400px;
+      }
+    </style>
+<script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
+
+<body>
+    <header>
+        Regular Expression
+        <br>
+        Test here
+    </header>
+    <nav>
+    <input type="text" id="firstInput" value="First input">
+    <input type="text" id="secondInput" value="Second input">
+    <button onclick="regExpTest()"> Click </button> <!-- this is where the button is, clicks to see-->
+    <br>
+    </nav>
+    <article>
+        <h2>Results:</h2>
+        <p id="demo"></p><!-- Where the results will be-->
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    </article>
+    <nav style="width: 23.855%">
+
+    </nav>
+    <footer>
+        <form action="https://white-grass-063a6a210.1.azurestaticapps.net/">
+                <input type="submit" value="Land Page" >
+                </form>
+            </footer>
+
+      <script>
+    function regExpTest() {
+        var x = document.getElementById("firstInput").value;//whatever the person wrote, word
+        var y = document.getElementById("secondInput").value;//the other thing the person wrote, regular expression
+
+        const str = x;
+        const regex = new RegExp(y);
+        const globalRegex = new RegExp(y, 'g');
+        if(regex.test(str)){//returns true if the word is in regular expression
+         document.getElementById("demo").innerHTML = "It does contain";
+        }
+        else{
+            document.getElementById("demo").innerHTML = "It does not contain";
+        }
+
+
+        document.getElementById("demo2").innerHTML = "Last index: "+ globalRegex.lastIndex;
+
+        document.getElementById("demo3").innerHTML = globalRegex.test(str);
+
+        document.getElementById("demo4").innerHTML = "Last index: " + globalRegex.lastIndex;
+
+        document.getElementById("demo5").innerHTML = globalRegex.test(str);
+        }
+    </script>
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'6d9afc8e084861ce',m:'Suy0cEPcWcIV7a1GKMRabMx8jfgISUeqv9N.HR8mAEU-1644219798-0-Afw15gFCnSU1xKNYO7bYvmllGst0UHvpEILV1VNawExPegBMNdWL3uHT2JDbI5Sbn+mx/qwxgeNlAvlqNVCROPiRAUMQygCOq5rarTE/rUvIUqFuRvfncKoQQ078b218lOqlFbsmaVP8IapujEnH+mUKhQYFkWLRb1gUuPtDO3F+yfNRdCIG8PMkRE3Bz7u0UQ==',s:[0xf5207b6be0,0x47c7ea1e47],}})();</script></body>
+
+</html>
